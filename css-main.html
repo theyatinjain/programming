@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Online Training</title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="loader.css">
+  <script src="loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 3;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;margin:0;" onload="myFunction()">
+<div id="loader"></div>
+<div class="container animate-bottom" ng-app="myApp" ng-controller="myCtrl" style="display:none;" id="myDiv">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-warning active" style="width:{{count}}%;max-width: 100%;">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+				<input type="text" class="form-control" id="myInput" placeholder="Search..." name="search"><br>
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">CSS - Online Training</h3>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/JcwjUNzlGg8" class="list-group-item active">CSS - Introduction</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/q_4kIgC4C30" class="list-group-item">CSS - Basic Syntax</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/wsYzj-uHrFk" class="list-group-item">CSS - Selectors</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/jRhFd5ouEWo" class="list-group-item">CSS - Inclusion in HTML</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/5Rz10Vj0WwQ" class="list-group-item">CSS - Colors</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/zXN9aH4ZQMk" class="list-group-item">CSS - Backgrounds</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/xLF8ujysPeo" class="list-group-item">CSS - Font</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/KnqhXZ6LvKA" class="list-group-item">CSS - Text</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/vHGTGKOggH0" class="list-group-item">CSS - Images</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/58LzpKbD458" class="list-group-item">CSS - Links</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/ivE2ZpGApdM" class="list-group-item">CSS - Tables</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/8bvFu9eISCk" class="list-group-item">CSS - Borders</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/9AQyicP7tb0" class="list-group-item">CSS - Lists</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/lKGaXRHMIYQ" class="list-group-item">CSS - Padding</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/lccPZMVfKew" class="list-group-item">CSS - Cursors</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/IpZ1pORhLWA" class="list-group-item">CSS - Dimensions</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/ygQ3dtwgmU0" class="list-group-item">CSS - Scroll Bars</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/DKixabrwSB0" class="list-group-item">CSS - Visibility</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/gP4T1--MRes" class="list-group-item">CSS - Positioning</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/SiRwqJpqIT8" class="list-group-item">CSS - Layers</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">CSS 3 - Introduction</h3>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/GDak8uOhEHA" class="list-group-item">CSS3 - Introduction</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/Z9TX9g4jy1k" class="list-group-item">CSS3 - Rounded Corners</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/6pbtO5EixfI" class="list-group-item">CSS3 - Border Images</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/U3pXi9uj3Hw" class="list-group-item">CSS3 - Multi Backgrounds</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/l16XQt8bGSU" class="list-group-item">CSS3 - Color</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/-8mw2EmngLs" class="list-group-item">CSS3 - Gradients</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/9hf_6gFq97E" class="list-group-item">CSS3 - Shadow</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/OpRMF8p20l4" class="list-group-item">CSS3 - Text</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/gye71O4NxBE" class="list-group-item">CSS3 - Web Font</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/Pc6sAC8ppvU" class="list-group-item">CSS3 - 2D Transform</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/GOeVRDomAiE" class="list-group-item">CSS3 - 3D Transform</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/ixNKQI3P5eA" class="list-group-item">CSS3 - Animation</a>
+		<a href="#" ng-click="count = count + 3" name="https://www.youtube.com/embed/DUlq1s8Dbc0" class="list-group-item">CSS3 - Multi Columns</a>
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;">CSS Online Training</h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/JcwjUNzlGg8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

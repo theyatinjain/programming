@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;">
+<div class="container" ng-app="myApp" ng-controller="myCtrl">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-success active" style="width:{{count}}%">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+        <input type="text" class="form-control" id="myInput" placeholder="Search" name="search">
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;"></h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/" class="list-group-item"></a>
+
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;"></h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

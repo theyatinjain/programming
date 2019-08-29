@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python - Tutorial</title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="loader.css">
+  <script src="loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 4;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;margin:0;" onload="myFunction()">
+<div id="loader"></div>
+<div class="container animate-bottom" ng-app="myApp" ng-controller="myCtrl" style="display:none;" id="myDiv">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-info active" style="width:{{count}}%;max-width: 100%;">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+				<input type="text" class="form-control" id="myInput" placeholder="Search..." name="search"><br>
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">Python - Tutorial</h3>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/y-DH9IphjpA" class="list-group-item active">Python - Overview</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/1vdMyo7HEMk" class="list-group-item">Python - Environment Setup</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/Jp4OrrXRBOM" class="list-group-item">Python - Basic Syntax</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/UE2RdlAngC4" class="list-group-item">Python - Variable Types</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/Kjdfo9v20EA" class="list-group-item">Python - Basic Operators</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/5_2c3IhU6FI" class="list-group-item">Python - Decision Making</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/HqLkANA9MpU" class="list-group-item">Python - Loops</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/5RNTXFEqkLk" class="list-group-item">Python - Numbers</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/BVEGr53YgMg" class="list-group-item">Python - Strings</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/ZCT0YUjHJP4" class="list-group-item">Python - Lists</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/d9tgH82AWPg" class="list-group-item">Python - Tuples</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/IfqwHDRNE18" class="list-group-item">Python - Dictionary</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/zEkRWAbzvUM" class="list-group-item">Python - Date & Time</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/39W0cl_HrLw" class="list-group-item">Python - Functions</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/Y08enJmWe1M" class="list-group-item">Python - Modules</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/-hn7Ro04l1g" class="list-group-item">Python - File I/O</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/vpg2Crjt7NI" class="list-group-item">Python - Exceptions</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">Python - Advance Tutorial</h3>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/kkOXue6O76A" class="list-group-item">Python - Classes/Objects</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/BaE7RmSyd8c" class="list-group-item">Python - Reg Expressions</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/2GFrn2J_GrA" class="list-group-item">Python - CGI Programming</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/T_UuSakgCTw" class="list-group-item">Python - Database Access</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/MhmL6y4U744" class="list-group-item">Python - Networking</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/ObQhCkXDPvg" class="list-group-item">Python - Sending Email</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/3GTDBocDMBw" class="list-group-item">Python - Multithreading</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/LR55nLFFWFA" class="list-group-item">Python - XML Processing</a>
+		<a href="#" ng-click="count = count + 4" name="https://www.youtube.com/embed/RVN2uop3TyI" class="list-group-item">Python - GUI Programming</a>
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;"></h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/y-DH9IphjpA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

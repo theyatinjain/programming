@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C# - Online Training</title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="loader.css">
+  <script src="loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 2;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;margin:0;" onload="myFunction()">
+<div id="loader"></div>
+<div class="container animate-bottom" ng-app="myApp" ng-controller="myCtrl" style="display:none;" id="myDiv">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-warning active" style="width:{{count}}%;max-width: 100%;">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+				<input type="text" class="form-control" id="myInput" placeholder="Search..." name="search"><br>
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C# - Basics</h3>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/MhdxhUgSpFw" class="list-group-item active">C# - Introduction</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/fsGwmJ3QJQo" class="list-group-item">C# - Environment Setup</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/-ei4Zv9UiHQ" class="list-group-item">C# - Program Structure</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/Gw_l2QnbLQ8" class="list-group-item">C# - Basic Program</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/VToVLx8BXyk" class="list-group-item">C# - Data Types</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/6Dk4fb0Pz4M" class="list-group-item">C# - Type Casting</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/s9Y9eHgw7QU" class="list-group-item">C# - Nullable Type</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/P2A98B12SfA" class="list-group-item">C# - Operators</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/I8T7p0zYryg" class="list-group-item">C# - Control Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/LYzv0KmN98o" class="list-group-item">C# - Conditional Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/-icJ_shKuNM" class="list-group-item">C# - If Else Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/gJhhWFtM21Q" class="list-group-item">C# - Switch Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/SzTJR8WhvDA" class="list-group-item">C# - Loops / Iteration Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/s6Yn7k3adAQ" class="list-group-item">C# - For Loop</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/m_2hQ5eXzQs" class="list-group-item">C# - While Loop</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/D17mX2tBCPg" class="list-group-item">C# - Do While Loop</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/qSj89YT2mfQ" class="list-group-item">C# - Jump Statement</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/daFdTssjm3w" class="list-group-item">C# - Arrays</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/XBH9WoEwXo8" class="list-group-item">C# - Methods</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/rtHFtUnJVn4" class="list-group-item">C# - String</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/zGmGz60WCvo" class="list-group-item">C# - String Builder</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/qOn68RH3IcQ" class="list-group-item">C# - Preprocessor Directive</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">OOPS in C#</h3>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/QGVpjkQ3PO4" class="list-group-item">C# - Intorduction to OOPS</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/4dV6-vnu5ck" class="list-group-item">C# - Implementing Class</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/gxPUerPyLj4" class="list-group-item">C# - Class Members</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/2ME7mnmbbrM" class="list-group-item">C# - Constructors</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/7P7rv_iAB-k" class="list-group-item">C# - Object Initializer</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/1w9JYK9d6uY" class="list-group-item">C# - Method Overloading</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/UnN0AcEa8pw" class="list-group-item">C# - Operator Overloading</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/cXeKfJQi2no" class="list-group-item">C# - Access Specifiers</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/Zv7-tVJDPv0" class="list-group-item">C# - Properties</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/Js24GMjfQKI" class="list-group-item">C# - Indexer</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/X4JaTDn23zs" class="list-group-item">C# - Inheritance</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/S0xB7xXFdFg" class="list-group-item">C# - Data Hiding</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/7u4HqIt_XBY" class="list-group-item">C# - Method Overriding</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/J_5Mn1SLgMc" class="list-group-item">C# - Abstract Class</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/fIrYW-vkn4s" class="list-group-item">C# - Interface</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/lNjUn1rMqIo" class="list-group-item">C# - Sealed Class</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/Tp7Coqo2alM" class="list-group-item">C# - Partial Class</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/AbFLpqU_IF8" class="list-group-item">C# - Generic Class</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/AkLY_DivXXA" class="list-group-item">C# - Struct</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/G4pTOJkVwbI" class="list-group-item">C# - Enum</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C# ADVANCED</h3>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/1kmt2VrvsjA" class="list-group-item">C# - Delegate</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/6B6UOSJtBkI" class="list-group-item">C# - Generic Delegate</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/vAnXrQTq8F4" class="list-group-item">C# - Anonymus Method</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/kYeKFMf2mO8" class="list-group-item">C# - Lambda Expression</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/sHUXbCXmZKU" class="list-group-item">C# - Introduction to GUI</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/_mF9XZ3osnE" class="list-group-item">C# - Exception Handling</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/19JoW_NHDE4" class="list-group-item">C# - Custom Exception</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/9178EdR6Pyg" class="list-group-item">C# - Regular Expression</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/uwJg2OpoH8E" class="list-group-item">C# - Collections</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/sXdAsfbiTjc" class="list-group-item">C# - Generic Collection</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/TU1rTuBM1Cs" class="list-group-item">C# - File Handling</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/iDunLWVaSIM" class="list-group-item">C# - Attribute</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/HsN0mVFpttU" class="list-group-item">C# - Extension Method</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/-sOrS2uVyS4" class="list-group-item">C# - Assembly</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/wfDFI9A56Gs" class="list-group-item">C# - Reflection</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/UnTyCqciXRk" class="list-group-item">C# - Multi - Threading</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/qYqZZWNn-4Y" class="list-group-item">C# - Task Parallel Library</a>
+		<a href="#" ng-click="count = count + 2" name="https://www.youtube.com/embed/8p0_P4x1MJ0" class="list-group-item">C# - Asynchronous Programming</a>
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;">C# - Online Training</h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/MhdxhUgSpFw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

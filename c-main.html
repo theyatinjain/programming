@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>C - Programming Language</title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="loader.css">
+  <script src="loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 1;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;margin:0;" onload="myFunction()">
+<div id="loader"></div>
+<div class="container animate-bottom" ng-app="myApp" ng-controller="myCtrl" style="display:none;" id="myDiv">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-success active" style="width:{{count}}%;max-width: 100%;">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+		      <input type="text" class="form-control" id="myInput" placeholder="Search..." name="search"><br>
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C - Basics</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/JOfK95bzwCA" class="list-group-item active">C - Programming Language</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/bIzTKJzs92w" class="list-group-item">C - Overview</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/rQJmZeT94pE" class="list-group-item">C - Environment Setup</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/3loZ0NOc4Wc" class="list-group-item">C - Program Structure</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/3cMs1SXAhgM" class="list-group-item">C - Basic Syntax</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/HPJ0Pt7NjLQ" class="list-group-item">C - Comments</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/WXTVvXErH9s" class="list-group-item">C - Escape Sequence</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">Getting Started</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/SKqVQO0ab8s" class="list-group-item">C - Data Types</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/1nAJiybMZNw" class="list-group-item">C - Void Data Types</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/i5A0rlq_3h0" class="list-group-item">C - Type Modifiers</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/WEJiq74lmq4" class="list-group-item">C - Variables</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/C5f4JcKZ9b4" class="list-group-item">C - Constants</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/pt2JIqro7yU" class="list-group-item">C - Ivalue & Rvalue</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/M7bE3G_Hm0o" class="list-group-item">C - Integer Constants</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/bNAP9ejTqM0" class="list-group-item">C - Floating Point Constants</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/6vg-t9rkPI4" class="list-group-item">C - Character Constants</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/GKgl-nS23FI" class="list-group-item">C - String Constants</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/GKgl-nS23FI" class="list-group-item">C - const Keyword</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/2e6FIYeDpno" class="list-group-item">C - Typedef</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/YlT2w28byWM" class="list-group-item">C - Enumerated Types</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Operators</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/XUGOM6r2HHg" class="list-group-item">C - Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/-Os8zvqMAS0" class="list-group-item">C - Arithmetic Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/1IbgFyBV1JI" class="list-group-item">C - Relational Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/1HcP9mdUTvE" class="list-group-item">C - Logical Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/Hs9w-yzM-AI" class="list-group-item">C - Bitwise Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/GLOmOgd0g-Q" class="list-group-item">C - Assignment Operators</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/zg-QE2Lp1l8" class="list-group-item">C - Operators Precedence</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Control Statements</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/MpzKMix2TdA" class="list-group-item">C - Flow Control</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/pSvJ-2X8FlA" class="list-group-item">C - if Statement</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/cffncnHXtbM" class="list-group-item">C - if..else statement</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/7InMz_6mOpQ" class="list-group-item">C - if..else if..else statement</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/H_NUW3l_6dg" class="list-group-item">C - Nested if statements</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/OtG5oFp_UeQ" class="list-group-item">C - Switch Statements</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/RMKp7Qr7tZA" class="list-group-item">C - For Loop</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/uGHWWJ1wHoI" class="list-group-item">C - While Loop</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/es_z0bM5pO0" class="list-group-item">C - Do While Loop</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">Web Application Penetration Testing</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/LVS4S_0Fy6Y" class="list-group-item">C - Arrays</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/vcw1fpqQkRQ" class="list-group-item">C - Multidimensional Arrays</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Strings</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/WSvHwUpaMJ4" class="list-group-item">C - Strings</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Pointers</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/kYIfLEY2xXM" class="list-group-item">C - Pointers</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/VFVLQwdlmRs" class="list-group-item">C - Null Pointers</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/zwEAthq3304" class="list-group-item">C - Pointers Arithmetic</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/zrW10y2oveU" class="list-group-item">C - Pointer to Pointer</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Storage Classes</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/Paqf7rFtek8" class="list-group-item">C - Storage Class</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/cKPSR12IT0Q" class="list-group-item">C - Auto Storage Class</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/nGzrus9SlW0" class="list-group-item">C - Register Storage Class</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/dXZZwWAPV_M" class="list-group-item">C - Static Storage Class</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/4l6oS8YJMl0" class="list-group-item">C - Extern Storage Class</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Custom Datatypes</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/dFS8uvxRuLA" class="list-group-item">C - Structure</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/kfPlCvrYp2U" class="list-group-item">C - Unions</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C File Handling</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/cEfuwpbGi1k" class="list-group-item">C - File I/O</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/cEfuwpbGi1k" class="list-group-item">C - Writing File</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/8fkbJ9F4ntk" class="list-group-item">C - Reading File</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Preprocessors Directives</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/5k7ZgnHxHa4" class="list-group-item">C - Preprocessors</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/-AcD3YpyFek" class="list-group-item">C - Macros</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/qmd5sVFOgpg" class="list-group-item">C - Header Files</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C Functions</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/GC4QEL_Bur4" class="list-group-item">C - Functions</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/MEJfbLnx5Lg" class="list-group-item">C - Functions Call By Value</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/jqMnytbaK7E" class="list-group-item">C - Functions Call By Address</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/hhdfzT7vMho" class="list-group-item">C - Functions and Pointers</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/IuNMo2e8x2Q" class="list-group-item">C - Function Variable Scopes</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/bO4Xf64WMfs" class="list-group-item">C - Local Variables</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/ggDdneaSSTw" class="list-group-item">C - Global Variables</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/WrdHVlwlMjs" class="list-group-item">C - Formal Parameters</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/Uar8VYY0C_g" class="list-group-item">C - Recursion</a>
+		<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">C++ Environment Setup</h3>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/rMfp6gKR_kk" class="list-group-item">C - Error Handling</a>
+		<a href="#" ng-click="count = count + 1" name="https://www.youtube.com/embed/734IQSAkww4" class="list-group-item">C - Memory Management</a>
+
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;">C - Programming Tutorials</h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/JOfK95bzwCA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>

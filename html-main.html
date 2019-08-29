@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Online Training</title>
+	<link rel="icon" href="logo.png">
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="loader.css">
+  <script src="loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script>
+$(document).ready(function(){
+  $("a").click(function(){
+  	var value = $(this).attr("name");
+    $("iframe").attr("src", value);
+  });
+});
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 5;
+});
+$(document).ready(function(){
+  $("#myList a").click(function(){
+    $(this).addClass("active");
+  });
+});
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+    $("#myList h3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</head>
+<style type="text/css">
+	html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
+<body style="background-color: white;margin:0;" onload="myFunction()">
+<div id="loader"></div>
+<div class="container animate-bottom" ng-app="myApp" ng-controller="myCtrl" style="display:none;" id="myDiv">
+	<div class="row">
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="new-index.html"><img src="logo.png" style="width: 30px;height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="new-index.html">HOME</a></li>
+        <li><a href="new-index.html#services">TUTORIALS</a></li>
+        <li><a href="new-index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div><br><br><br><br>
+	<div class="row">
+		<h3 style="color: black;">Progress made by you : {{count}}%</h3>
+		<div class="progress">
+    <div class="progress-bar progress-bar-striped progress-bar-info active" style="width:{{count}}%;max-width: 100%;">
+      {{count}}%
+    </div>
+  </div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"><hr>
+			<div class="list-group" id="myList">
+        <input type="text" class="form-control" id="myInput" placeholder="Search..." name="search"><br>
+				<h3 style="color: white ; background-color: black ; padding: 5px 6px ;">HTML - Online Training</h3>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/NAEHbzXMNpA" class="list-group-item active">HTML - Introduction</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/uoMCY2FhPAE" class="list-group-item">HTML - Getting Started</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/uMIjPKUXEEE" class="list-group-item">HTML - Basic Tags</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/jlpkV3oY5-A" class="list-group-item">HTML - Attributes</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/4ZunanytE88" class="list-group-item">HTML - Formatting Tags</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/nurQlBDhFLY" class="list-group-item">HTML - Phrase Tags</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/O3P01QDvdqY" class="list-group-item">HTML - Meta Tags</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/u0WYSDbmoj8" class="list-group-item">HTML - Comments</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/GuOb9t1zeQg" class="list-group-item">HTML - Images</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/GuOb9t1zeQg" class="list-group-item">HTML - Tables</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/1Pv3dlO8KWw" class="list-group-item">HTML - List Tags</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/VuNS-OA9CZA" class="list-group-item">HTML - Hyperlinks</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/HYQJyTdph5E" class="list-group-item">HTML - Frames</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/uf_vad2ViPM" class="list-group-item">HTML - IFrames</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/Ql64muSQcCw" class="list-group-item">HTML - Blocks</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/z_HqwA70Op8" class="list-group-item">HTML - Fonts</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/2PgE7MpKzZU" class="list-group-item">HTML - Form Tag</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/HBCf2qDeVGQ" class="list-group-item">HTML - Marquee</a>
+		<a href="#" ng-click="count = count + 5" name="https://www.youtube.com/embed/nFCulrQ_IZ0" class="list-group-item">HTML - Embedding Media</a>
+			</div>
+		</div>
+		<div class="col-sm-8" id="div2">
+			<center>
+		<hr>
+		<h2 style="color: black;">HTML Online Training</h2><br>
+		<iframe width="700" height="420" src="https://www.youtube.com/embed/NAEHbzXMNpA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br></center>
+		</div>
+	</div>
+</div>
+</body>
+</html>
